@@ -183,7 +183,9 @@ def convert_and_upload_supervisely_project(
                         im_path_to_habitat[os.path.join(path, images_folder, row[0] + ".jpg")] = (
                             row[2]
                         )
-                        im_path_to_count[os.path.join(path, images_folder, row[0])] = int(row[1])
+                        im_path_to_count[os.path.join(path, images_folder, row[0] + ".jpg")] = int(
+                            row[1]
+                        )
                     elif ds_pre_name == "Classification":
                         im_path_to_habitat[os.path.join(path, row[0] + ".jpg")] = row[1]
                     else:
