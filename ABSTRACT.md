@@ -48,8 +48,7 @@ Videos for DeepFish were gathered across 20 habitats situated in remote coastal 
 | Muddy mangrove               | 364      | 37       | 29       |
 | **Total**                    | **39,766** | **3,200** | **620** |
 
-<span style="font-size: smaller; font-style: italic;">DeepFish dataset statistics. Number of images annotated for each sub-dataset: FishClf for
-classification, FishLoc for counting/localization, and FishSeg for semantic segmentation.</span>
+<span style="font-size: smaller; font-style: italic;">DeepFish dataset statistics. Number of images annotated for each sub-dataset: FishClf for classification, FishLoc for counting/localization, and FishSeg for semantic segmentation.</span>
 
 The original labels of the dataset are limited to classification tasks, providing binary information indicating the presence or absence of fish in each video frame, regardless of the fish count. While these labels serve a purpose in analyzing fish utilization across different habitats by categorizing images based on fish presence, they lack the granularity needed for detailed habitat analysis. To overcome this limitation, they obtained point-level and semantic segmentation labels. These additional annotations enable models to perform more advanced computer vision tasks such as object counting, localization, and segmentation. With these labels, the models can learn to accurately analyze and interpret the complexities of underwater habitats, facilitating a deeper understanding of fish dynamics and habitat characteristics.
 
