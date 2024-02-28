@@ -13,37 +13,44 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "Deep Fish"
+PROJECT_NAME_FULL: str = "DeepFish Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.MIT(
+    source_url="https://github.com/alzayats/DeepFish/blob/master/LICENSE"
+)
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [
+    Research.Environmental(),
+    Industry.Robotics(),
+]
+CATEGORY: Category = Category.Environmental(extra=[Category.Robotics(), Category.Biology()])
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation(), CVTask.Classification()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2020
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://alzayats.github.io/DeepFish/"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 14369398
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/deep-fish"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = (
+    "http://data.qld.edu.au/public/Q5842/2020-AlzayatSaleh-00e364223a600e83bd9c3f5bcd91045-DeepFish/DeepFish.tar"
+)
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,19 +58,62 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = (
+    "https://www.nature.com/articles/s41598-020-71639-x"
+)
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"some_link_to_repo_if_exists"}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {
+    "GitHub": "https://github.com/alzayats/DeepFish"
+}
 
 CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
-AUTHORS_CONTACTS: Optional[List[str]] = None
+AUTHORS: Optional[List[str]] = [
+    "Alzayat Saleh",
+    "Issam Laradji",
+    "Dmitry Konovalov",
+    "Michael Bradley",
+    "David Vazquez",
+    "Marcus Sheaves",
+]
+AUTHORS_CONTACTS: Optional[List[str]] = ["alzayat.saleh@my.jcu.edu.au"]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
+    "James Cook University, Australia",
+    "University of British Columbia, Canada",
+    "Element AI, Canada",
+]
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
+    "https://www.jcu.edu.au/",
+    "https://www.ubc.ca/",
+    "https://www.osler.com/",
+]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
+    "habitats": [
+        "low complexity reef",
+        "sandy mangrove prop roots",
+        "complex reef",
+        "seagrass bed",
+        "low algal bed",
+        "reef trench",
+        "boulders",
+        "mixed substratum mangrove - prop roots",
+        "rocky mangrove - prop roots",
+        "upper mangrove - medium rhizophora",
+        "rock shelf",
+        "mangrove - mixed pneumatophore prop root",
+        "sparse algal bed",
+        "muddy mangrove - pneumatophores and trunk",
+        "large boulder and pneumatophores",
+        "rocky mangrove - large boulder and trunk",
+        "bare substratum",
+        "upper mangrove - tall rhizophora",
+        "large boulder",
+        "muddy mangrove - pneumatophores",
+    ],
+    "__POSTTEXT__": "Additionally, some images marked with ***no fish*** and ***fish count*** tags",
+}
 TAGS: Optional[List[str]] = None
 
 
