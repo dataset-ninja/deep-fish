@@ -15,7 +15,7 @@ from dataset_tools.templates import (
 ##################################
 PROJECT_NAME: str = "DeepFish"
 PROJECT_NAME_FULL: str = "DeepFish Dataset"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -25,7 +25,7 @@ LICENSE: License = License.MIT(
 )
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [
     Research.Environmental(),
-    Industry.Robotics(),
+    Industry.Fishery(),
 ]
 CATEGORY: Category = Category.Environmental(extra=[Category.Livestock()])
 
