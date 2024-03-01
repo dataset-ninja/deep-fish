@@ -1,4 +1,4 @@
-**DeepFish Dataset** is a dataset for instance segmentation, classification, semantic segmentation, object detection, counting, and localization tasks. It is used in the environmental research, and in the robotics industry. 
+**DeepFish Dataset** is a dataset for instance segmentation, classification, semantic segmentation, object detection, counting, and localization tasks. It is used in the environmental research, and in the fishery industry. 
 
 The dataset consists of 43586 images with 374 labeled objects belonging to 1 single class (*fish*).
 
