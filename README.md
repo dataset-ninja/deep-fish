@@ -1,3 +1,3 @@
 # DeepFish Dataset
 
-Deep Fish is a dataset for instance segmentation and classification tasks.
+DeepFish is a dataset for instance segmentation, classification, semantic segmentation, object detection, counting, and localization tasks.
