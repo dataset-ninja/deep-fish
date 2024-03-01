@@ -13,7 +13,7 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "Deep Fish"
+PROJECT_NAME: str = "DeepFish"
 PROJECT_NAME_FULL: str = "DeepFish Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
@@ -27,9 +27,16 @@ APPLICATIONS: List[Union[Industry, Domain, Research]] = [
     Research.Environmental(),
     Industry.Robotics(),
 ]
-CATEGORY: Category = Category.Environmental(extra=[Category.Robotics(), Category.Biology()])
+CATEGORY: Category = Category.Environmental(extra=[Category.Livestock()])
 
-CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation(), CVTask.Classification()]
+CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
+    CVTask.Classification(),
+    CVTask.SemanticSegmentation(),
+    CVTask.ObjectDetection(),
+    CVTask.Counting(),
+    CVTask.Localization(),
+]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
