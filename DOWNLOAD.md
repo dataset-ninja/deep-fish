@@ -1,6 +1,6 @@
 Dataset **DeepFish** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/u/V/vq/YZDTRm30dpJJVpSjG3t25UEwjpKMHub8RsZ1ObN2ZOrzWWjmuh54yMFsDfbgflmq4x3RQlDhs9tyEaXOeco12bMSxgCzHG6bMQ2AM95POaH7iRrzrSo33Q6WpYmO.tar)
+ [Download](https://www.dropbox.com/scl/fi/5gecye604zbqm1m1r6zdr/deepfish-DatasetNinja.tar?rlkey=gyeopc7obncfm3eyytd6o5jy4&dl=1)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
